@@ -27,4 +27,14 @@ class Organization extends Model
         'latitude' => 'double',
         'longitude' => 'double',
     ];
+
+    /**
+     * Get all of the users for the Organization
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function users(): HasMany
+    {
+        return $this->hasMany(User::class, 'organzation_id', 'id');
+    }
 }

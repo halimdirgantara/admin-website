@@ -29,4 +29,14 @@ return new class extends Migration
     {
         Schema::dropIfExists('users');
     }
+
+    /**
+     * Get the organzation that owns the 2014_10_12_000000_create_users_table
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function organzation(): BelongsTo
+    {
+        return $this->belongsTo(organzation::class, 'organization_id');
+    }
 };
