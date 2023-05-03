@@ -29,9 +29,6 @@ class MoonShineServiceProvider extends ServiceProvider
                     ->translatable()
                     ->icon('heroicons.building-library'),
             ])->translatable()->icon('heroicons.inbox-stack'),
-
-            MenuItem::make('Documentation', 'https://laravel.com')
-                ->badge(fn() => 'Check'),
         ]);
     }
 }
